@@ -21,12 +21,12 @@ for index, (image, label) in enumerate(images_labels[:4]):
     de la imagen (lo que suele ser el caso). El resultado será una imagen en la que los píxeles se muestran como un cuadrado de varios píxeles.
     
     Y realizamos un ploteo de la informacion de entrenamiento en la primera mitad del plot
-    """
+    
     plt.subplot(2, 4, index + 1)
     plt.axis('off')
     plt.imshow(image, cmap=plt.cm.gray_r, interpolation='nearest')
     plt.title('Train: %i' % label)
-
+"""
 
 """
 Procedemos a convertir los datos en una matriz, donde estaran (muestra, caracteristicas) de cada una de las imagenes, para el quel clasificador pueda aprender de las imagenes
@@ -73,11 +73,12 @@ procedemos a pintar en el plot nuestros resultados de predicion
 
 images_and_predictions = list(zip(numeros.images[n_samples // 2:], predicted))
 for index, (image, prediction) in enumerate(images_and_predictions[:4]):
+    """
     plt.subplot(2, 4, index + 5)
     plt.axis('off')
     plt.imshow(image, cmap=plt.cm.gray_r, interpolation='nearest')
     plt.title('Prediccion: %i' % prediction)
-
+"""
 plt.show()
 
 """
